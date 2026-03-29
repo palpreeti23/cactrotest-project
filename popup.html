@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Highlight Saver</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <span class="logo">&#9733;</span>
+      <h1>Highlight Saver</h1>
+    </div>
+    <button id="clear-all-btn" title="Delete all highlights">Clear All</button>
+  </div>
+
+  <div class="api-section">
+    <input
+      type="password"
+      id="api-key-input"
+      placeholder="sk-... (paste OpenAI key, saved locally)"
+      autocomplete="off"
+    />
+    <button id="save-key-btn">Save Key</button>
+  </div>
+  <div class="api-hint">
+    Key is stored only in your browser — never sent anywhere except OpenAI.
+  </div>
+
+  <div id="count-bar">
+    <span id="highlight-count">0 highlights</span>
+  </div>
+
+  <div id="highlights-container">
+    <div id="empty-state">
+      <div class="empty-icon">&#128220;</div>
+      <p>No highlights yet.</p>
+      <p class="empty-hint">Select text on any page — a popup will appear to save it.</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
